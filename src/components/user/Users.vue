@@ -213,7 +213,7 @@ export default {
     addDialogClosed () {
       this.$refs.addFormRef.resetFields()
     },
-    // 添加用户
+    // 点击确定后添加用户
     addUser () {
       this.$refs.addFormRef.validate(async valid => {
         if (!valid) return
