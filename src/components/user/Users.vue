@@ -259,7 +259,6 @@ export default {
 
       // 如果用户确认删除，则返回值为字符串 confirm
       // 如果用户取消了删除，则返回值为字符串 cancel
-      // console.log(confirmResult)
 
       if (confirmTag !== 'confirm') return this.$message('取消删除该用户')
       const { data: res } = await this.$http.delete('users/' + id)
