@@ -191,6 +191,8 @@ export default {
           { validator: checkMobile, trigger: 'blur' }
         ]
       },
+
+      // 角色分配数据初始化：分配框显示，展示的用户信息，可以分配的角色信息，选中的角色
       setRoleDialogVisible: false,
       userInfo: {},
       roleslist: [],
@@ -299,6 +301,7 @@ export default {
 
       this.setRoleDialogVisible = true
     },
+    // 保存更改的用户角色信息
     async saveRoleInfo () {
       if (!this.selectedRoleId) return this.$message.error('请选择需要分配的角色！')
       const { data: res } = await this.$http.put(`users/${this.userInfo.id}/role`,
