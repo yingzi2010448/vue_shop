@@ -6,8 +6,12 @@
             <el-breadcrumb-item>数据统计</el-breadcrumb-item>
             <el-breadcrumb-item>数据报表</el-breadcrumb-item>
         </el-breadcrumb>
-        <!-- 1为 ECharts 准备一个具备大小（宽高）的 DOM -->
-        <div id="main" style="width: 700px;height:400px;"></div>
+
+        <el-card>
+            <!-- 1为 ECharts 准备一个具备大小（宽高）的 DOM -->
+            <div id="main" style="width: 700px;height:400px;"></div>
+        </el-card>
+
     </div>
 </template>
 

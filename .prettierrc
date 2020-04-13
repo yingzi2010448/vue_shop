@@ -1,4 +1,6 @@
 {
     "semi": flase
     "singleQuote": true
+    "printWidth": 200
+                     
 }

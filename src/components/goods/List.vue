@@ -134,7 +134,7 @@ export default {
 
       if (confirmTag !== 'confirm') return this.$message('已取消删除该商品')
       const { data: res } = await this.$http.delete('goods/' + id)
-      if (res.meta.status !== 200) return this.$message.error('删除该商品！')
+      if (res.meta.status !== 200) return this.$message.error('删除该商品失败！')
       this.$message.success('删除该商品成功！')
       this.getGoodsList()
     },
