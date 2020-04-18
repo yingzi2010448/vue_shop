@@ -1,3 +1,8 @@
+// 仅在生产模式下使用的插件
+const productionPlugins = []
+if (process.env.NODE_ENV === 'production') {
+  productionPlugins.push('transform-remove-console')
+}
 module.exports = {
   presets: [
     '@vue/cli-plugin-babel/preset'
@@ -10,6 +15,7 @@ module.exports = {
         styleLibraryName: 'theme-chalk'
       }
     ],
-    'transform-remove-console'
+    ...productionPlugins,
+    '@babel/plugin-syntax-dynamic-import'
   ]
 }

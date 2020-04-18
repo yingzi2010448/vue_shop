@@ -130,7 +130,6 @@ export default {
     async getRolesList () {
       const { data: res } = await this.$http.get('roles')
       if (res.meta.status !== 200) return this.$message.error(' 请求角色列表失败！')
-      console.log(res)
       this.roleslist = res.data
     },
     // 通过角色id删除对应权限id
@@ -158,13 +157,11 @@ export default {
       // 将当前所操作的角色id绑定到data中以便增删改查时定位
       this.roleId = role.id
       const { data: res } = await this.$http.get('/rights/tree')
-      console.log(res)
       if (res.meta.status !== 200) return this.$message.error('获取权限数据失败！')
       this.$message.success('获取权限数据成功！')
       this.rightslist = res.data
 
       this.getLeafKeys(role, this.defKeys)
-      console.log(this.defKeys)
       this.setRightDialogVisible = true
     },
     // 获取该角色下所有三级权限的id，并保存到 defKeys 数组中
@@ -190,7 +187,6 @@ export default {
       this.setRightDialogVisible = false
     },
     showEditDialog (role) {
-      console.log(role)
       this.roleId = role.id
       this.editRoleForm.roleName = role.roleName
       this.editRoleForm.roleDesc = role.roleDesc

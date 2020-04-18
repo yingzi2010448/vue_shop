@@ -1,17 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../components/Login.vue'
-import Home from '../components/Home.vue'
-import Welcome from '../components/Welcome.vue'
-import Users from '../components/user/Users.vue'
-import Rights from '../components/rights/Rights.vue'
-import Roles from '../components/rights/Roles.vue'
-import Cate from '../components/goods/Cate.vue'
-import Params from '../components/goods/Params.vue'
-import List from '../components/goods/List.vue'
-import Add from '../components/goods/Add.vue'
-import Order from '../components/order/Order.vue'
-import Report from '../components/report/Report.vue'
+// import Login from '../components/Login.vue'
+const Login = () => import(/* webpackChunkName: "login-home-welcome" */ '../components/Login.vue')
+const Home = () => import(/* webpackChunkName: "login-home-welcome" */ '../components/Home.vue')
+const Welcome = () => import(/* webpackChunkName: "login-home-welcome" */ '../components/Welcome.vue')
+const Users = () => import(/* webpackChunkName: "users" */ '../components/user/Users.vue')
+const Rights = () => import(/* webpackChunkName: "rights" */ '../components/rights/Rights.vue')
+const Roles = () => import(/* webpackChunkName: "rights" */ '../components/rights/Roles.vue')
+const Cate = () => import(/* webpackChunkName: "goods" */ '../components/goods/Cate.vue')
+const Params = () => import(/* webpackChunkName: "goods" */ '../components/goods/Params.vue')
+const List = () => import(/* webpackChunkName: "goods" */ '../components/goods/List.vue')
+const Add = () => import(/* webpackChunkName: "goods" */ '../components/goods/Add.vue')
+const Order = () => import(/* webpackChunkName: "order-report" */ '../components/order/Order.vue')
+const Report = () => import(/* webpackChunkName: "order-report" */ '../components/report/Report.vue')
+// import Home from '../components/Home.vue'
+// import Welcome from '../components/Welcome.vue'
+// import Users from '../components/user/Users.vue'
+// import Rights from '../components/rights/Rights.vue'
+// import Roles from '../components/rights/Roles.vue'
+// import Cate from '../components/goods/Cate.vue'
+// import Params from '../components/goods/Params.vue'
+// import List from '../components/goods/List.vue'
+// import Add from '../components/goods/Add.vue'
+// import Order from '../components/order/Order.vue'
+// import Report from '../components/report/Report.vue'
 
 Vue.use(VueRouter)
 
